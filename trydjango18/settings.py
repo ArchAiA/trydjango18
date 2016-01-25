@@ -26,7 +26,12 @@ SECRET_KEY = 'l$i0f-!1^(l47&1gfiekse_l80-1hb+6pg+vawp^^ta7@-l-2('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []                          #L16
+EMAIL_HOST = 'SMTP.gmail.com'               #L16
+EMAIL_HOST_USER = 'yourgmail@gmail.com'     #L16
+EMAIL_HOST_PASSWORD = 'password'            #L16
+EMAIL_PORT = 587                            #L16
+EMAIL_USE_TLS = turned                      #L16
 
 
 # Application definition

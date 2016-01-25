@@ -31,7 +31,7 @@ EMAIL_HOST = 'SMTP.gmail.com'               #L16
 EMAIL_HOST_USER = 'yourgmail@gmail.com'     #L16
 EMAIL_HOST_PASSWORD = 'password'            #L16
 EMAIL_PORT = 587                            #L16
-EMAIL_USE_TLS = turned                      #L16
+EMAIL_USE_TLS = True                      #L16
 
 
 # Application definition
@@ -107,3 +107,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_env', 'static_root')                          #For Server
+
+STATICFILES_DIRS = (                    #For Dev
+    os.path.join(BASE_DIR, 'static_in_pro', 'our_static'),
+    # os.path.join(BASE_DIR, 'static_in_env'),
+)
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_env', 'media_root')

@@ -3,6 +3,13 @@
 
 {% block head_title %} Welcome | {{ block.super }}{% endblock %}
 
+<style>
+{% block style %}
+	.text-align-center {text-align: center;
+	}
+{% endblock %}
+</style>
+
 {% block jumbotron_content %}
 <div class='row'>
 	<div class='col-sm-6'>
@@ -31,7 +38,7 @@
 <div class="row">
 
 	<div class="col-sm-3 pull-right">
-		<p class='lead'>{{title}}</p>
+		<p class='lead text-align-center'>{{title}}</p>
 		<form method='POST' action=''> {% csrf_token %}
 		{{form|crispy}}
 			<input class='btn btn-primary' type='submit' value='Sign Up'>
@@ -39,15 +46,15 @@
 	</div>
 
 	<div class='col-sm-3'>
-		<p class='lead'>Built With Django &amp; Bootstrap</p>
+		<p class='lead text-align-center'>Built With Django &amp; Bootstrap</p>
 	</div>
 
 	<div class='col-sm-3'>
-		<p class='lead'>Created For Starters of All Kinds</p>	
+		<p class='lead text-align-center'>Created For Starters of All Kinds</p>	
 	</div>
 
 	<div class='col-sm-3'>
-		<p class='lead'>Always Open Source</p>	
+		<p class='lead text-align-center'>Always Open Source</p>	
 	</div>
 
 </div>

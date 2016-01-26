@@ -9,27 +9,24 @@
 {% endblock %}
 </style>
 
-{% block jumbotron_content %}
-<div class='row'>
-	<div class='col-sm-6'>
-		<h1>Try Django 1.8</h1>
-		<p>Bla Bla Bla</p>
-		<p>To see the difference between static and fixed top navbars, just scroll.</p>
-		<p>
-		  <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Join Us &raquo;</a>
-		</p>
-	</div>
-	<div class='col-sm-6' style='background-color:black; height:300px'>
+{% block jumbotron %}
+<div class='jumbotron'>
+	<div class='row'>
+		<div class='col-sm-6'>
+			<h1>Try Django 1.8</h1>
+			<p>Bla Bla Bla</p>
+			<p>To see the difference between static and fixed top navbars, just scroll.</p>
+			<p>
+			  <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Join Us &raquo;</a>
+			</p>
+		</div>
+		<div class='col-sm-6' style='background-color:black; height:300px'>
+		</div>
 	</div>
 </div>
-
-
-{{ block.super }}
 {% endblock %}
 
-{% block jumbotron %}
-{{ block.super }}
-{% endblock %}
+
 
 
 

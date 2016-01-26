@@ -33,7 +33,7 @@ def home(request):
 			"title": "Thank You"
 		}
 
-	return render(request, "home.html", context) #Render combines and returns (Request, Template, and Context)
+	return render(request, "example_fluid.html", context) #Render combines and returns (Request, Template, and Context)
 
 
 

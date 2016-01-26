@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block head_title %} Welcome | {{ block.super }}{% endblock %}
-
-
 
 {% block jumbotron_content %}
 <div class="jumbotron">
@@ -24,18 +23,20 @@ hi
 
 
 
-
 {% block content %}
-<h1>{{title}}</h1>
+<div class="row">
+	<div class="col-sm-6 col-md-3">
+		<h1>{{title}}</h1>
 
-{{user}}
-{{request.user}}
-{{request}}
+		{{user}}
+		{{request.user}}
+		{{request}}
 
-<form method='POST' action=''> {% csrf_token %}
-{{form.as_p}}
-<input type='submit' value='Sign Up'>
-
-</form>
+		<form method='POST' action=''> {% csrf_token %}
+		{{form|crispy}}
+			<input class='btn btn-primary' type='submit' value='Sign Up'>
+		</form>
+	</div>
+</div>
 
 {% endblock %}
